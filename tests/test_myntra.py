@@ -22,8 +22,14 @@ def test_myntra_furnishing(browser):
     # Verify Myntra logo
     myntra.verify_myntra_logo()
 
-    # Verify Home Furnishing text
+
     myntra.verify_home_furnishing_text()
     myntra.click_filters_men()
+    myntra.click_filters_women()
+    
+    myntra.click_size()
+    # myntra.click_filters_boys()
+    # myntra.click_filters_girls()
+    
   
  

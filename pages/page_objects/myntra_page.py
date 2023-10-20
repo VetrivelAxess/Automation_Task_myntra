@@ -9,12 +9,9 @@ class MyntraPage:
     def __init__(self, page):
         self.page = page
 
-    # def verify_myntra_logo(self):
-    #     logo_element = self.page.locator(MyntraLocators.myntra_logo)
-    #     assert logo_element.is_visible(), "Myntra logo is not visible on the page"
-    #     print("Myntra logo is visible on the page")
+  
     def verify_myntra_logo(self):
-        myntra_logo_element = self.page.locator("div.desktop-logoContainer")
+        myntra_logo_element = self.page.locator(MyntraLocators.myntra_logo)
         expect(myntra_logo_element).to_be_visible()
         logging.info("Verifying the myntra logo")
 
@@ -32,13 +29,22 @@ class MyntraPage:
     def click_filters_women(self):
         women_filter_element = self.page.locator(MyntraLocators.filters_women)
         women_filter_element.click()
-        self.page.wait_for_timeout(1000)
+        self.page.wait_for_timeout(2000)
         logging.info("Clicked the Women filter")
 
     def click_filters_boys(self):
         boys_filter_element = self.page.locator(MyntraLocators.filters_boys)
         boys_filter_element.click()
+        self.page.wait_for_timeout(2000)
+        logging.info("Clicked the boys filter")
     
     def click_filters_girls(self):
         girls_filter_element = self.page.locator(MyntraLocators.filters_girls)
         girls_filter_element.click()
+        self.page.wait_for_timeout(2000)
+        logging.info("Clicked the girls filter")
+        
+    def click_size(self):
+        #  size_element.wait_for_selector(MyntraLocators.size)
+         size_element = self.page.locator(MyntraLocators.size)
+         size_element.click()
