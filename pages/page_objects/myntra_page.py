@@ -20,9 +20,8 @@ class MyntraPage:
 
     def verify_home_furnishing_text(self):
         home_furnishing_element = self.page.locator(MyntraLocators.home_furnishing)
-
         expect(home_furnishing_element).to_contain_text("Home Furnishing")
-        logging.info("Verifying the Home Furnishing")
+        logging.info("Verifying the Home Furnishing Text")
 
     def click_filters_men(self):
         men_filter_element = self.page.locator(MyntraLocators.filters_men)
