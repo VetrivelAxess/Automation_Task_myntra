@@ -35,10 +35,10 @@ class MyntraPage:
         self.page.wait_for_timeout(1000)
         logging.info("Clicked the Women filter")
 
-    # def click_filters_boys(self):
-    #     boys_filter_element = self.page.locator(MyntraLocators.filters_boys)
-    #     boys_filter_element.click()
-    #
-    # def click_filters_girls(self):
-    #     girls_filter_element = self.page.locator(MyntraLocators.filters_girls)
-    #     girls_filter_element.click()
+    def click_filters_boys(self):
+        boys_filter_element = self.page.locator(MyntraLocators.filters_boys)
+        boys_filter_element.click()
+    
+    def click_filters_girls(self):
+        girls_filter_element = self.page.locator(MyntraLocators.filters_girls)
+        girls_filter_element.click()
